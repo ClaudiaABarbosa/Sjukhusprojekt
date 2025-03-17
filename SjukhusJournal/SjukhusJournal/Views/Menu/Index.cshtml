@@ -1,0 +1,29 @@
+﻿<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/menu.css"> <!-- CSS -->
+</head>
+
+
+<div class="menu-container">
+    <div class="menu-box">
+        <h3 class="text-center fw-bold">Meny</h3>
+        <hr />
+        <ul class="list-group">
+
+            <li class="list-group-item">
+                <a asp-action="Index" asp-controller="Journal" class="menu-link">Skapa ny journalanteckning</a>
+            </li>
+
+            <li class="list-group-item">
+                <a asp-action="Detaljer" asp-controller="Journal" class="menu-link">Visa patientjournal</a>
+            </li>
+
+            <li class="list-group-item">Uppdatera journal</li>
+            <li class="list-group-item">Lista patienter</li>
+            <li class="list-group-item">Sök patient</li>
+            <li class="list-group-item">Skicka remiss</li>
+            <li class="list-group-item">Förskriv recept</li>
+            <li class="list-group-item">Receptförnyelse</li>
+        </ul>
+    </div>
+</div>

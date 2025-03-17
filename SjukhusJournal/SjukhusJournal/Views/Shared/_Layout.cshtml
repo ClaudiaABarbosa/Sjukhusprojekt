@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SjukhusJournal</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <img src="~/img/logo.png" alt="Högskolan Väst Sjukhus Logotyp">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a asp-action="Index" asp-controller="Menu">StartSida</a></li>
+                    <li class="dropdown">
+                       <a href="#">Avdelning och Mottganing</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">Hitta Mottagning</a></li>
+                            <li><a href="#">Ortopedi</a></li>
+                            <li><a href="#">Kurorgi</a></li>
+                            <li><a href="#">Vaccination</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Patient</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">Boka tid för besök</a></li>
+                            <li><a href="#">Din Journal</a></li>
+                            <li><a href="#">Boka tid för vaccination</a></li>
+                            <li><a href="#">Vanliga Frågor</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Jobb och Framtid</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">Lediga Tjänster</a></li>
+                            <li><a href="#">Karriärvägar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="secondary-nav">
+                <ul>
+                    <li><a href="#"><img src="~/img/aboutUs.png" alt="Om oss">Om oss</a></li>
+                    <li><a href="#"><img src="~/img/karta.png" alt="Hitta oss">Hitta oss</a></li>
+                    <li><a href="#"><img src="~/img/sprak.png" alt="Språk">Språk</a></li>
+                    <li class="dropdown">
+                        <a href="#">
+                            <img src="~/img/loggin.png" alt="Logga in">
+                            Logga in
+                        </a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">Patient</a></li>
+                            <li><a href="#">Personal</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer>
+    </footer>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>
