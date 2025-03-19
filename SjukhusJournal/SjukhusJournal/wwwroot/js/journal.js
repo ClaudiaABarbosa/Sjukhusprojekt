@@ -7,7 +7,7 @@ document.getElementById("searchJournal").addEventListener("click", async functio
     }
 
     try {
-        let response = await fetch(`https://localhost:7210/api/Journal/${personnummer}`);
+        let response = await fetch(`https://informatik12.ei.hv.se/JournalAPI/api/Journal/${personnummer}`);
         if (!response.ok) throw new Error("Kunde inte hämta journaler.");
         let journals = await response.json();
 

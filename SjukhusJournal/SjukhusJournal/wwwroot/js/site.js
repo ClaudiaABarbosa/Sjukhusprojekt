@@ -6,7 +6,7 @@ document.getElementById("patientId").addEventListener("blur", async function () 
         try {
 
             //Hämtar information från API
-            let response = await fetch(`https://localhost:7148/api/Patient/${personnummer}`); 
+            let response = await fetch(`https://informatik12.ei.hv.se/PatientAPI/api/Patient/${personnummer}`); 
 
             // Läs in JSON-svaret EN gång
             const patient = await response.json();
@@ -34,7 +34,7 @@ document.querySelector("form").addEventListener("submit", async function (event)
     };
 
     try {
-        let response = await fetch("https://localhost:7210/api/Journal", {
+        let response = await fetch("https://informatik12.ei.hv.se/JournalAPI/api/Journal", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(journalData)

@@ -28,11 +28,11 @@ builder.Services.AddDbContext<PatientDbContext>(options =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.MapScalarApiReference();
     app.MapOpenApi();
-}
+//}
 
 //Aktivera CORS här
 app.UseCors("AllowAll");
