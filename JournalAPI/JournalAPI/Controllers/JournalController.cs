@@ -56,6 +56,24 @@ namespace JournalAPI.Controllers
             return Ok(journaler);
         }
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateJournal(int id, Journal updatesJournal)
+        {
+            var journal = await _context.Journaler.FirstOrDefaultAsync(j => j.JournalId == id);
+
+            if (journal is null)
+                return NotFound($"Inga journaler hittades.");
+
+
+           
+            // Uppdatera patientens fält
+            journal.Anteckning = updatesJournal.Anteckning;
+            journal.Personnummer = updatesJournal.Personnummer;
+            await _context.SaveChangesAsync();
+
+            return NoContent(); // 204 No Content = Uppdatering lyckades
+        }
+
 
         [HttpDelete]
         public async Task<IActionResult> DeleteJournal(int id)
