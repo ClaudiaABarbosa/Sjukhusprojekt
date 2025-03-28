@@ -18,8 +18,13 @@
                 <a asp-action="Detaljer" asp-controller="Journal" class="menu-link">Visa patientjournal</a>
             </li>
 
-            <li class="list-group-item">Uppdatera journal</li>
-            <li class="list-group-item">Lista patienter</li>
+            <li class="list-group-item">
+                <a asp-action="Index" asp-controller="JournalUpdate" class="menu-link">Uppdatera journal</a>
+            </li>
+
+            <li class="list-group-item">
+                <a asp-action="Index" asp-controller="PatientList" class="menu-link">Patientlista</a>
+            </li>
             <li class="list-group-item">Sök patient</li>
             <li class="list-group-item">Skicka remiss</li>
             <li class="list-group-item">Förskriv recept</li>
